@@ -1,1 +1,12 @@
+HTML
+
+HTML boiler plate
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title goes here</title>
+  </head>
+</html>
 
