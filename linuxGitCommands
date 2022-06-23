@@ -1,0 +1,16 @@
+mkdir
+cd
+dir
+touch
+code
+CTRL+SHIFT+C/V for copy/paste
+
+
+[Program - Action - Destination]
+git add
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
+git status
+git log
+git commit -m "Description for commit"
+git push
+git push origin main
