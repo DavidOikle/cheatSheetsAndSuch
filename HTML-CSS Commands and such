@@ -8,5 +8,49 @@ HTML boiler plate
     <meta charset="UTF-8">
     <title>Title goes here</title>
   </head>
+  <body>
+  
+    // Most elements must be contained within the <body></body> to function, other than things like referencing a style sheet, the language, or other settings style items.
+  
+  </body>
 </html>
 
+
+
+<p> Paragraph - probably the workhore of plain text in HTML </p>
+<h1>Header types - goes from 1 -6 </h1>
+<strong>Makes text bold</strong>
+<em>Makes text italic</em>
+
+Remember that HTML uses parent/child nesting.
+  So anything applied to a parent will apply to the childern of said parent aswell.
+
+<!-- This is how to comment in HTML -->
+
+Unordered lists!
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+And an ordered list! 
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+<a href="https://www.google.ca">An Anchor element, used to turn a piece of text into a hyperlink.</a>
+  Omiting the HREF part makes it not appear as a link, as the HREF gives the text a blue colour by default.
+  Also important to remember absolute vs relative links. Absolute, IE: https://www.google.ca, are links on the internet.
+  Relative is a local link, IE: about.html, if the about.html was located in the same location as the current address. IE an index going to an about page.
+  Add in the folder name and a slash to go to a sub directory. IE: pages/about.html.
+  A ./ at the front will indicate a link should be found from the current directory. Good to help avoid future issues.
+  In addition, a ../ wil indicate going up a folder. Can be chained as many times as needed. ../../../etc
+  Just starting with / will return to the root.
+  
+Images! Can be linked to using either absolute or relative addresses, same as above.  
+<img src="https://www.google.ca.png">
+
+Alt  <img src="image_address" alt="Alt text goes here"> will display alternative text should the image not load, and is also important from an accesibilty stand point, should someone be using a screen reader or something similar.
