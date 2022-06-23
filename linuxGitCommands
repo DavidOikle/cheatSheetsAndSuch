@@ -12,5 +12,6 @@ git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
 git status
 git log
 git commit -m "Description for commit"
+git commit "Description for commit" //No -m for Visual studio, maybe for git itself?//
 git push
 git push origin main
