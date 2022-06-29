@@ -1,1 +1,169 @@
+* universal selector : Good for things like using the same font for an entire page/project.
 
+ORDER OF Specificity:
+ID > Class > type
+Failling diferent selector's, the section with a higher number of selectors will take over and overwrite the one with a lower number of selectors.
+
+Type selector.
+HTML:<div> Text here </div>
+
+CSS: div {
+color: white;
+}
+
+Div is just a placeholder here, can be made into anything like "left","account name", or whatever else. 
+Very broad, and applies to everything with it.
+A better example would be something like <h1>Header</h1>. Having the 
+
+Class selector
+HTML:<div class="alert-text"> Elements go here </div>
+
+CSS: .alert-text {
+color: white;
+}
+Similar function to a type selector. Multiple classes can be applied to a single element. class="alert-text severe-alert"
+
+Id selector:
+HTML: <div id="title">My Awesome 90's Page</div>
+
+CSS: #title {
+  background-color: red;
+}
+
+Noted by the #, the ID selector is similar to the class. Big thing is an element can only have one ID, so they are VERY specefic.
+Don't over use when a class will do.
+
+Group selectors:
+
+CSS: .read,
+.unread {
+  color: white;
+  background-color: black;
+}
+
+.read {
+  /* several unique declarations */
+}
+
+.unread {
+  /* several unique declarations */
+}
+Group selectors usesful for cutting down on repetition. All text can have the same font for example, but different sizes and such.
+
+Subsection Header: 
+HTM:<div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection preview">This is where a preview for a post might go.</p>
+</div>
+CSS:.subsection.header {
+  color: red;
+}
+What .subsection.header does is it selects any element that has both the subsection and header classes. 
+Notice how there isn’t any space between the .subsection and .header class selectors. 
+This syntax basically works for chaining any combination of selectors, except for chaining more than one type selector.
+
+This can also be used to chain a class and an ID, as shown below:
+HTML: <div>
+  <div class="subsection header">Latest Posts</div>
+  <p class="subsection" id="preview">This is where a preview for a post might go.</p>
+</div>
+
+You can take the two elements above and combine them with the following:
+CSS:.subsection.header {
+  color: red;
+}
+
+.subsection#preview {
+  color: blue;
+}
+In general, you can’t chain more than one type selector since an element can’t be two different types at once. 
+For example, chaining two type selectors like div and p would give us the selector divp, which wouldn’t work since the selector would try to find a literal <divp> element, which doesn’t exist.
+
+Descendant Combinator
+
+HTML: <div class="ancestor"> <!-- A -->
+  <div class="contents"> <!-- B -->
+    <div class="contents"> <!-- C -->
+    </div>
+  </div>
+</div>
+
+<div class="contents"></div> <!-- D -->
+
+CSS: .ancestor .contents {
+  /* some declarations */
+}
+
+For the above, D would not have the CSS stuff applied to it, as it doesnt have the necesary parent of .ancestor, despite having .contents.
+
+
+
+COLOR: 
+ /* hex example: */
+  color: #1100ff;
+  /* rgb example: */
+  color: rgb(100, 0, 127);
+  /* hsl example: */
+  color: hsl(15, 82%, 56%);
+  
+  FONT:
+  font-family: "Times New Roman", sans-serif;
+  
+  font-size: 22px
+  
+  font-weight: bold
+  font-weight: 700
+  
+  text-align: center
+  
+  (CSS):
+  img {
+  height: auto;
+  width: 500px;
+}
+
+background-color: yellow
+
+Inheritance
+<div id="parent">
+  <div class="child"></div>
+</div>
+CSS: 
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}
+Despite the parent element having a higher specificity with an ID, the child element would have the color: blue style applied since that declaration directly targets it, while color: red from the parent is only inherited.
+
+Rule Order
+Baring anything else, the RULE order will decide what wins. 
+Really simply, actually. Whichever rule was the last defined is the winner.
+
+
+External CSS
+HTML: <head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+INTERNAL CSS (Within the HTML file - try to avoid this unless it's for a single page)
+<head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>...</body>
+
+INLINE CSS ( AVOID UNLESS A ONE OFF, AND EVEN THEN, REALLY ASK IF IT's A ONE OFF)
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
