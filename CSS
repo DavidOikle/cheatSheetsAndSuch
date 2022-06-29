@@ -167,3 +167,42 @@ INLINE CSS ( AVOID UNLESS A ONE OFF, AND EVEN THEN, REALLY ASK IF IT's A ONE OFF
 <body>
   <div style="color: white; background-color: black;">...</div>
 </body>
+
+margin-bottom: 10px;
+padding: 30px;
+margin: 30px;
+
+Span is an inline-level element by default. 
+It can be used to group text content and inline HTML elements for styling and should only be used when no other semantic HTML element is appropriate.
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+  minim veniam, <span class="highlight">quis nostrud <a href="https://www.dictionary.com/browse/exercitation">exercitation</a>
+  ullamco laboris</span> nisi ut aliquip ex ea commodo consequat.   
+</p>
+
+FLEX BOXES OH MAN MY FAVOURITE ( But no for real, flexboxes seem relaly freaking cool! When they work it's magical)
+HTML: <div class="flex-container">
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+</div>
+
+CSS: .flex-container {
+   display: flex; 
+}
+
+/* this selector selects all divs inside of .flex-container */
+.flex-container div {
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 100px;
+  flex: 1; 
+}
+
+A flex container is any element that has display: flex on it. 
+A flex item is any element that lives directly inside of a flex container.
+
+Somewhat confusingly, any element can be both a flex container and a flex item. 
+Said another way, you can also put display: flex on a flex item and then use flexbox to arrange its children.
+
